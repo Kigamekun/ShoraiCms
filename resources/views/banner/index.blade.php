@@ -30,7 +30,12 @@
   </div>
 
   <br>
-
+  @if (Session::has('message'))
+  <div class="alert alert-{{ session('status') }}">
+      {{ session('message') }}
+  </div>
+@endif
+  <br>
     <div class="container">
         <div class="d-flex justify-content-end">
             <a href="{{ route('banner.create') }}" class="btn btn-success">Buat banner</a>
@@ -55,7 +60,7 @@
                     {{-- <td>{{$item->content}}</td> --}}
 
 
-                    <td>
+                    <td class="d-flex justify-content-end">
                         <a class="btn btn-info" href="{{ route('banner.edit', ['id'=>$item->id]) }}">Update</a>
                         <a class="btn btn-danger" href="{{ route('banner.delete', ['id'=>$item->id]) }}">Delete</a>
                     </td>
@@ -76,7 +81,14 @@
 <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
 <script>
     $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+        language: {
+    'paginate': {
+      'previous': '<i class="bi bi-arrow-left-circle"></i>',
+      'next': '<i class="bi bi-arrow-right-circle"></i>'
+    }
+  }
+    });
 } );
 </script>
 @endsection

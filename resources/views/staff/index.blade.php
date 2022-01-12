@@ -32,7 +32,12 @@
   </div>
 
   <br>
-
+  @if (Session::has('message'))
+  <div class="alert alert-{{ session('status') }}">
+      {{ session('message') }}
+  </div>
+@endif
+  <br>
 
     <div class="container">
         <div class="d-flex justify-content-end">
@@ -43,11 +48,11 @@
         <table id="example" class="table table-striped" style="width:100%">
             <thead>
                 <tr>
-                    <th>Judul</th>
-                    <th>COntent</th>
-                    <th>Categories</th>
+                    <th>Nama</th>
+                    <th>Jabatan</th>
+                    <th>NIP</th>
 
-                    <th>Action</th>
+                    <th>urutan</th>
 
                 </tr>
             </thead>
@@ -55,11 +60,12 @@
                 @foreach ($staff as $item)
 
                 <tr>
-                    <td>{{$item->judul}}</td>
-                    <td>{{$item->content}}</td>
-                    <td>{{$item->categories}}</td>
+                    <td>{{$item->nama}}</td>
+                    <td>{{$item->jabatan}}</td>
+                    <td>{{$item->nip}}</td>
+                    <td>{{$item->urutan}}</td>
 
-                    <td>
+                    <td class="d-flex justify-content-end">
                         <a class="btn btn-info" href="{{ route('staff.edit', ['id'=>$item->id]) }}">Update</a>
                         <a class="btn btn-danger" href="{{ route('staff.delete', ['id'=>$item->id]) }}">Delete</a>
                     </td>
@@ -80,7 +86,14 @@
 <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
 <script>
     $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+        language: {
+    'paginate': {
+      'previous': '<i class="bi bi-arrow-left-circle"></i>',
+      'next': '<i class="bi bi-arrow-right-circle"></i>'
+    }
+  }
+    });
 } );
 </script>
 @endsection

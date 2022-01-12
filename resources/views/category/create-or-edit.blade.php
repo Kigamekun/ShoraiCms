@@ -53,7 +53,7 @@
                 @csrf
                 <div class="mb-3">
                     <label for="nama" class="form-label">nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="isi Judul ">
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="isi Judul " required>
                 </div>
 
                 <br>

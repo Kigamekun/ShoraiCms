@@ -3,6 +3,7 @@
 @section('css')
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+
 @endsection
 
 @section('content')
@@ -32,7 +33,12 @@
   </div>
 
   <br>
-
+  @if (Session::has('message'))
+  <div class="alert alert-{{ session('status') }}">
+      {{ session('message') }}
+  </div>
+@endif
+  <br>
     <div class="container">
         <div class="d-flex justify-content-end">
             <a href="{{ route('link.create') }}" class="btn btn-success">Buat link</a>
@@ -56,7 +62,7 @@
                     <td>{{$item->nama}}</td>
                     <td><a target="_blank" href="{{$item->link}}">{{$item->link}}</a></td>
 
-                    <td>
+                    <td class="d-flex justify-content-end">
                         <a class="btn btn-info" href="{{ route('link.edit', ['id'=>$item->id]) }}">Update</a>
                         <a class="btn btn-danger" href="{{ route('link.delete', ['id'=>$item->id]) }}">Delete</a>
                     </td>
@@ -77,7 +83,15 @@
 <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
 <script>
     $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+
+        language: {
+    'paginate': {
+      'previous': '<i class="bi bi-arrow-left-circle"></i>',
+      'next': '<i class="bi bi-arrow-right-circle"></i>'
+    }
+  }
+    });
 } );
 </script>
 @endsection

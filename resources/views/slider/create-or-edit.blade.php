@@ -53,17 +53,17 @@
                 @csrf
                 <div class="mb-3">
                     <label for="Judul" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="Judul" name="judul" placeholder="isi Judul ">
+                    <input type="text" class="form-control" id="Judul" name="judul" placeholder="isi Judul " required>
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" placeholder="Masukan Konten"></textarea>
+                    <textarea class="form-control" name="description" placeholder="Masukan Konten" required></textarea>
                 </div>
 
 
 
-                <input type="file" name="gambar" class="dropify" data-max-width="2000" data-max-width="2000" />
+                <input type="file" name="gambar" class="dropify" data-max-width="2000" data-max-width="2000" required/>
 
 
                 <br>

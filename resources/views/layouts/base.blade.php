@@ -18,11 +18,18 @@
     <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="{{ url('assets/css/argon.css?v=1.2.0') }}" type="text/css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     @yield('css')
 </head>
 
 <body>
+
+    <style>
+        .alert {
+            width:80%;
+            margin:auto;
+        }
+    </style>
     <!-- Sidenav -->
     <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
         <div class="scrollbar-inner">
@@ -114,11 +121,6 @@
     </nav>
     <!-- Main content -->
     <div class="main-content" id="panel">
-        @if (Session::has('message'))
-            <div class="alert alert-{{ session('status') }}">
-                {{ session('message') }}
-            </div>
-        @endif
 
         @yield('content')
     </div>

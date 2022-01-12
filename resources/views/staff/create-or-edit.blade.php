@@ -48,50 +48,73 @@
 
         @if ($act == 'create')
 
-            <form action="{{ route('slider.store') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('staff.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label for="Judul" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="Judul" name="judul" placeholder="isi Judul ">
+                    <label for="nama" class="form-label">nama</label>
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="isi nama " required>
                 </div>
+
 
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" placeholder="Masukan Konten"></textarea>
+                    <label for="jabatan" class="form-label">jabatan</label>
+                    <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="isi jabatan " required>
                 </div>
 
 
+                <div class="mb-3">
+                    <label for="nip" class="form-label">nip</label>
+                    <input type="number" class="form-control" id="nip" name="nip" placeholder="isi nip " required>
+                </div>
 
-                <input type="file" name="gambar" class="dropify" data-max-width="2000" data-max-width="2000" />
+
+                <div class="mb-3">
+                    <label for="urutan" class="form-label">urutan</label>
+                    <input type="number" class="form-control" id="urutan" name="urutan" placeholder="isi urutan " required>
+                </div>
+
 
 
                 <br>
+                <input type="file" name="foto" class="dropify" data-max-width="2000" data-max-width="2000" required/>
+
                 <br>
                 <center> <button class="btn btn-success" type="submit">Submit</button>
                 </center>
             </form>
         @else
 
-            <form action="{{ route('slider.update', ['id' => $data->id]) }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('staff.update', ['id' => $data->id]) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label for="Judul" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="Judul" name="judul" value="{{ $data->judul }}"
-                        placeholder="isi Judul ">
+                    <label for="nama" class="form-label">nama</label>
+                    <input type="text" class="form-control" id="nama" name="nama" value="{{$data->nama}}" placeholder="isi nama ">
                 </div>
 
+
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                    <textarea class="form-control" name="description"
-                        placeholder="Masukan Konten">{{ $data->description }}</textarea>
+                    <label for="jabatan" class="form-label">jabatan</label>
+                    <input type="text" class="form-control" id="jabatan" name="jabatan" value="{{$data->jabatan}}" placeholder="isi jabatan ">
                 </div>
+
+
+                <div class="mb-3">
+                    <label for="nip" class="form-label">nip</label>
+                    <input type="number" class="form-control" id="nip" name="nip" value="{{$data->nip}}" placeholder="isi nip ">
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="urutan" class="form-label">urutan</label>
+                    <input type="number" class="form-control" id="urutan" name="urutan" value="{{$data->urutan}}" placeholder="isi urutan ">
+                </div>
+
 
 
                 <br>
 
-
-                <input type="file" name="gambar" class="dropify"
-                    data-default-file="{{ url('slider/' . $data->gambar) }}" data-max-width="2000" data-max-width="2000" />
+                <input type="file" name="foto" class="dropify"
+                    data-default-file="{{ url('staffThumb/' . $data->foto) }}" data-max-width="2000" data-max-width="2000" />
 
 
                 <br>

@@ -52,30 +52,30 @@
                 @csrf
                 <div class="mb-3">
                     <label for="Judul" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="Judul" name="judul" placeholder="isi Judul ">
+                    <input type="text" class="form-control" id="Judul" name="judul" placeholder="isi Judul " required>
                 </div>
 
                 <div class="mb-3">
                     <label for="Tanggal" class="form-label">Tanggal</label>
-                    <input type="date" class="form-control" id="Tanggal" name="tanggal" placeholder="isi Tanggal ">
+                    <input type="date" class="form-control" id="Tanggal" name="tanggal" placeholder="isi Tanggal " required>
                 </div>
                 <div class="mb-3">
                     <label for="Waktu Mulai" class="form-label">Waktu Mulai</label>
-                    <input type="time" class="form-control" id="Waktu Mulai" name="waktu_mulai" placeholder="isi Tanggal ">
+                    <input type="time" class="form-control" id="Waktu Mulai" name="waktu_mulai" placeholder="isi Tanggal " required>
                 </div>
                 <div class="mb-3">
                     <label for="Waktu Selesai" class="form-label">Waktu Selesai</label>
-                    <input type="time" class="form-control" id="Waktu Selesai" name="waktu_selesai" placeholder="isi Tanggal ">
+                    <input type="time" class="form-control" id="Waktu Selesai" name="waktu_selesai" placeholder="isi Tanggal " required>
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
-                    <textarea class="form-control" name="deskripsi" placeholder="Masukan Konten"></textarea>
+                    <textarea class="form-control" name="deskripsi" placeholder="Masukan Konten" required></textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Lokasi</label>
-                    <textarea class="form-control" name="lokasi" placeholder="Masukan Konten"></textarea>
+                    <textarea class="form-control" name="lokasi" placeholder="Masukan Konten" required></textarea>
                 </div>
 
 

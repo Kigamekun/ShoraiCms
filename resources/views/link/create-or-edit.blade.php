@@ -54,12 +54,12 @@
                 @csrf
                 <div class="mb-3">
                     <label for="Judul" class="form-label">nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="isi nama link ">
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="isi nama link " required>
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Link</label>
-                    <textarea class="form-control" name="link" placeholder="Masukan Konten"></textarea>
+                    <textarea class="form-control" name="link" placeholder="Masukan Konten" required></textarea>
                 </div>
 
 

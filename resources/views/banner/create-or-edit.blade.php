@@ -48,13 +48,13 @@
         @csrf
         <div class="mb-3">
             <label for="Judul" class="form-label">Judul</label>
-            <input type="text" class="form-control" id="Judul" name="judul" placeholder="isi Judul ">
+            <input type="text" class="form-control" id="Judul" name="judul" placeholder="isi Judul " required>
           </div>
 
 <br>
 
 
-          <input type="file" name="gambar" class="dropify"  data-max-width="2000" data-max-width="2000" />
+          <input type="file" name="gambar" class="dropify"  data-max-width="2000" data-max-width="2000" required/>
 
 
           <br>

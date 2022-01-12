@@ -84,16 +84,16 @@
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">title</label>
-                    <input type="text" class="form-control" id="title" name="title" placeholder="isi title ">
+                    <input type="text" class="form-control" id="title" name="title" placeholder="isi title " required>
                 </div>
                 <div class="mb-3">
                     <label for="seo_title" class="form-label">seo_title</label>
-                    <input type="text" class="form-control" id="seo_title" name="seo_title" placeholder="isi title ">
+                    <input type="text" class="form-control" id="seo_title" name="seo_title" placeholder="isi title " required>
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Contents</label>
-                    <textarea class="form-control" name="content" placeholder="Masukan Konten" id="editor"></textarea>
+                    <textarea class="form-control" name="content" placeholder="Masukan Konten" id="editor" required></textarea>
                 </div>
 
 

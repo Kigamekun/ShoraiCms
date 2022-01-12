@@ -58,15 +58,15 @@
                 @csrf
                 <div class="mb-3">
                     <label for="Judul" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="Judul" name="judul" placeholder="isi Judul ">
+                    <input type="text" class="form-control" id="Judul" name="judul" placeholder="isi Judul " required>
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Contents</label>
-                    <textarea class="form-control" name="content" placeholder="Masukan Konten" id="editor"></textarea>
+                    <textarea class="form-control" name="content" placeholder="Masukan Konten" id="editor" required></textarea>
                 </div>
 
-                <select class="form-select" name="categories" aria-label="Default select example">
+                <select class="form-select" name="categories" aria-label="Default select example" required>
                     <option selected>Pilih Kategori</option>
 
                     @foreach (DB::table('categories')->get() as $category)
@@ -78,7 +78,7 @@
                 <br>
 
 
-                <input type="file" name="gambar" class="dropify" data-max-width="2000" data-max-width="2000" />
+                <input type="file" name="gambar" class="dropify" data-max-width="2000" data-max-width="2000" required/>
 
 
                 <br>
