@@ -53,7 +53,7 @@
 
 
 
-                        @if (env('APP_TYPE') == 1)
+                        {{-- @if (env('APP_TYPE') == 1) --}}
 
                             <li class="nav-item">
                                 <a href="{{ route('berita.index') }}" class="nav-link ">
@@ -61,7 +61,7 @@
                                 </a>
                             </li>
 
-                        @endif
+                        {{-- @endif --}}
 
 
                         <li class="nav-item">
