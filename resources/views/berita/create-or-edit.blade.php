@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('css')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
         integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog=="
@@ -50,6 +50,31 @@
     </style>
 
 
+<div class="header bg-primary pb-1">
+    <div class="container-fluid">
+      <div class="header-body">
+        <div class="row align-items-center py-4">
+          <div class="col-lg-6 col-7">
+            <h6 class="h2 text-white d-inline-block mb-0">berita</h6>
+            <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+              <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                <li class="breadcrumb-item"><a href="{{ route('management') }}">Dashboards</a></li>
+                <li class="breadcrumb-item active" aria-current="{{ route('berita.index') }}">page</li>
+              </ol>
+            </nav>
+          </div>
+
+        </div>
+        <!-- Card stats -->
+
+      </div>
+    </div>
+  </div>
+
+  <br>
+<center><h1>berita</h1></center>
+  <br>
     <div class="container">
 
         @if ($act == 'create')
@@ -66,7 +91,7 @@
                     <textarea class="form-control" name="content" placeholder="Masukan Konten" id="editor" required></textarea>
                 </div>
 
-                <select class="form-select" name="categories" aria-label="Default select example" required>
+                <select class="form-control" name="categories" aria-label="Default select example" required>
                     <option selected>Pilih Kategori</option>
 
                     @foreach (DB::table('categories')->get() as $category)
