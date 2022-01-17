@@ -41,14 +41,14 @@
 @endsection
 
 @section('header')
-<div class="section-header">
-    <h1>page</h1>
-    <div class="section-header-breadcrumb">
-      <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-      <div class="breadcrumb-item"><a href="{{ route('page.index') }}">page</a></div>
+    <div class="section-header">
+        <h1>page</h1>
+        <div class="section-header-breadcrumb">
+            <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('page.index') }}">page</a></div>
 
+        </div>
     </div>
-  </div>
 @endsection
 
 @section('content')
@@ -56,9 +56,11 @@
 
 
 
-  <br>
-<center><h1>page</h1></center>
-  <br>
+    <br>
+    <center>
+        <h1>page</h1>
+    </center>
+    <br>
     <style>
         .dropify-wrapper .dropify-message p {
             font-size: 14px;
@@ -71,58 +73,64 @@
         <div class="card">
 
             <div class="card-body">
-        @if ($act == 'create')
+                @if ($act == 'create')
 
-            <form action="{{ route('page.store') }}" method="post" >
-                @csrf
-                <div class="mb-3">
-                    <label for="title" class="form-label">title</label>
-                    <input type="text" class="form-control" id="title" name="title" placeholder="isi title " required>
-                </div>
-                <div class="mb-3">
-                    <label for="seo_title" class="form-label">seo_title</label>
-                    <input type="text" class="form-control" id="seo_title" name="seo_title" placeholder="isi title " required>
-                </div>
+                    <form action="{{ route('page.store') }}" method="post">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="title" class="form-label">title</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="isi title "
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="seo_title" class="form-label">seo_title</label>
+                            <input type="text" class="form-control" id="seo_title" name="seo_title"
+                                placeholder="isi title " required>
+                        </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Contents</label>
-                    <textarea class="form-control" name="content" placeholder="Masukan Konten" id="editor" required></textarea>
-                </div>
-
-
-                <br>
-                <center> <button class="btn btn-success" type="submit">Submit</button>
-                </center>
-            </form>
-        @else
-
-            <form action="{{ route('page.update', ['id' => $data->id]) }}" method="post" >
-                @csrf
-                <div class="mb-3">
-                    <label for="title" class="form-label">title</label>
-                    <input type="text" class="form-control" id="title" value="{{ $data->title }}" name="title" placeholder="isi title ">
-                </div>
-                <div class="mb-3">
-                    <label for="seo_title" class="form-label">seo_title</label>
-                    <input type="text" class="form-control" id="seo_title" name="seo_title" value="{{ $data->seo_title }}" placeholder="isi title ">
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Contents</label>
-                    <textarea class="form-control" name="content" placeholder="Masukan Konten" id="editor">{{ $data->content }}</textarea>
-                </div>
-
-                <br>
-                <center> <button class="btn btn-success" type="submit">Submit</button>
-                </center>
-            </form>
-        @endif
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Contents</label>
+                            <textarea class="form-control" name="content" placeholder="Masukan Konten" id="editor"
+                                required></textarea>
+                        </div>
 
 
+                        <br>
+                        <center> <button class="btn btn-success" type="submit">Submit</button>
+                        </center>
+                    </form>
+                @else
+
+                    <form action="{{ route('page.update', ['id' => $data->id]) }}" method="post">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="title" class="form-label">title</label>
+                            <input type="text" class="form-control" id="title" value="{{ $data->title }}" name="title"
+                                placeholder="isi title ">
+                        </div>
+                        <div class="mb-3">
+                            <label for="seo_title" class="form-label">seo_title</label>
+                            <input type="text" class="form-control" id="seo_title" name="seo_title"
+                                value="{{ $data->seo_title }}" placeholder="isi title ">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Contents</label>
+                            <textarea class="form-control" name="content" placeholder="Masukan Konten"
+                                id="editor">{{ $data->content }}</textarea>
+                        </div>
+
+                        <br>
+                        <center> <button class="btn btn-success" type="submit">Submit</button>
+                        </center>
+                    </form>
+                @endif
+
+
+            </div>
+
+        </div>
     </div>
-
-</div>
-</div>
 @endsection
 
 @section('js')

@@ -10,14 +10,14 @@
 
 
 @section('header')
-<div class="section-header">
-    <h1>link</h1>
-    <div class="section-header-breadcrumb">
-      <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-      <div class="breadcrumb-item"><a href="{{ route('link.index') }}">link</a></div>
+    <div class="section-header">
+        <h1>link</h1>
+        <div class="section-header-breadcrumb">
+            <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('link.index') }}">link</a></div>
 
+        </div>
     </div>
-  </div>
 @endsection
 
 
@@ -34,63 +34,67 @@
 
 
 
-  <br>
-<center><h1>link</h1></center>
-  <br>
+    <br>
+    <center>
+        <h1>link</h1>
+    </center>
+    <br>
 
 
     <div class="container">
         <div class="card">
 
             <div class="card-body">
-        @if ($act == 'create')
+                @if ($act == 'create')
 
-            <form action="{{ route('link.store') }}" method="post" >
-                @csrf
-                <div class="mb-3">
-                    <label for="Judul" class="form-label">nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="isi nama link " required>
-                </div>
+                    <form action="{{ route('link.store') }}" method="post">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="Judul" class="form-label">nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="isi nama link "
+                                required>
+                        </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Link</label>
-                    <textarea class="form-control" name="link" placeholder="Masukan Konten" required></textarea>
-                </div>
-
-
-                <br>
-                <center> <button class="btn btn-success" type="submit">Submit</button>
-                </center>
-            </form>
-        @else
-
-            <form action="{{ route('link.update', ['id' => $data->id]) }}" method="post" >
-                @csrf
-                <div class="mb-3">
-                    <label for="Judul" class="form-label">Nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama" value="{{ $data->nama }}"
-                        placeholder="isi nama ">
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Link</label>
-                    <textarea class="form-control" name="link"
-                        placeholder="Masukan Konten">{{ $data->link }}</textarea>
-                </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Link</label>
+                            <textarea class="form-control" name="link" placeholder="Masukan Konten" required></textarea>
+                        </div>
 
 
-                <br>
+                        <br>
+                        <center> <button class="btn btn-success" type="submit">Submit</button>
+                        </center>
+                    </form>
+                @else
+
+                    <form action="{{ route('link.update', ['id' => $data->id]) }}" method="post">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="Judul" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama" value="{{ $data->nama }}"
+                                placeholder="isi nama ">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Link</label>
+                            <textarea class="form-control" name="link"
+                                placeholder="Masukan Konten">{{ $data->link }}</textarea>
+                        </div>
 
 
-                <br>
-                <center> <button class="btn btn-success" type="submit">Submit</button>
-                </center>
-            </form>
-        @endif
+                        <br>
 
 
+                        <br>
+                        <center> <button class="btn btn-success" type="submit">Submit</button>
+                        </center>
+                    </form>
+                @endif
+
+
+            </div>
+        </div>
     </div>
-</div> </div>
 @endsection
 
 @section('js')

@@ -10,14 +10,14 @@
 
 
 @section('header')
-<div class="section-header">
-    <h1>category</h1>
-    <div class="section-header-breadcrumb">
-      <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-      <div class="breadcrumb-item"><a href="{{ route('category.index') }}">category</a></div>
+    <div class="section-header">
+        <h1>category</h1>
+        <div class="section-header-breadcrumb">
+            <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('category.index') }}">category</a></div>
 
+        </div>
     </div>
-  </div>
 @endsection
 
 @section('content')
@@ -32,45 +32,48 @@
 
 
 
-  <br>
-<center><h1>category</h1></center>
-  <br>
+    <br>
+    <center>
+        <h1>category</h1>
+    </center>
+    <br>
 
     <div class="container">
         <div class="card">
 
             <div class="card-body">
-        @if ($act == 'create')
+                @if ($act == 'create')
 
-            <form action="{{ route('category.store') }}" method="post" >
-                @csrf
-                <div class="mb-3">
-                    <label for="nama" class="form-label">nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="isi Judul " required>
-                </div>
+                    <form action="{{ route('category.store') }}" method="post">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="isi Judul "
+                                required>
+                        </div>
 
-                <br>
-                <center> <button class="btn btn-success" type="submit">Submit</button>
-                </center>
-            </form>
-        @else
+                        <br>
+                        <center> <button class="btn btn-success" type="submit">Submit</button>
+                        </center>
+                    </form>
+                @else
 
-            <form action="{{ route('category.update', ['id' => $data->id]) }}" method="post" >
-                @csrf
-                <div class="mb-3">
-                    <label for="Judul" class="form-label">nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama" value="{{ $data->nama }}"
-                        placeholder="isi nama ">
-                </div>
+                    <form action="{{ route('category.update', ['id' => $data->id]) }}" method="post">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="Judul" class="form-label">nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama" value="{{ $data->nama }}"
+                                placeholder="isi nama ">
+                        </div>
 
-                <br>
-                <center> <button class="btn btn-success" type="submit">Submit</button>
-                </center>
-            </form>
-        @endif
+                        <br>
+                        <center> <button class="btn btn-success" type="submit">Submit</button>
+                        </center>
+                    </form>
+                @endif
 
-    </div>
-</div>
+            </div>
+        </div>
 
     </div>
 

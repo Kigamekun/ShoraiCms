@@ -9,14 +9,14 @@
 @endsection
 
 @section('header')
-<div class="section-header">
-    <h1>staff</h1>
-    <div class="section-header-breadcrumb">
-      <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-      <div class="breadcrumb-item"><a href="{{ route('staff.index') }}">staff</a></div>
+    <div class="section-header">
+        <h1>staff</h1>
+        <div class="section-header-breadcrumb">
+            <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('staff.index') }}">staff</a></div>
 
+        </div>
     </div>
-  </div>
 @endsection
 
 @section('content')
@@ -31,97 +31,108 @@
 
 
 
-  <br>
-<center><h1>staff</h1></center>
-  <br>
+    <br>
+    <center>
+        <h1>staff</h1>
+    </center>
+    <br>
 
     <div class="container">
         <div class="card">
 
             <div class="card-body">
-        @if ($act == 'create')
+                @if ($act == 'create')
 
-            <form action="{{ route('staff.store') }}" method="post" enctype="multipart/form-data">
-                @csrf
-                <div class="mb-3">
-                    <label for="nama" class="form-label">nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="isi nama " required>
-                </div>
-
-
-                <div class="mb-3">
-                    <label for="jabatan" class="form-label">jabatan</label>
-                    <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="isi jabatan " required>
-                </div>
+                    <form action="{{ route('staff.store') }}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="isi nama " required>
+                        </div>
 
 
-                <div class="mb-3">
-                    <label for="nip" class="form-label">nip</label>
-                    <input type="number" class="form-control" id="nip" name="nip" placeholder="isi nip " required>
-                </div>
+                        <div class="mb-3">
+                            <label for="jabatan" class="form-label">jabatan</label>
+                            <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="isi jabatan "
+                                required>
+                        </div>
 
 
-                <div class="mb-3">
-                    <label for="urutan" class="form-label">urutan</label>
-                    <input type="number" class="form-control" id="urutan" name="urutan" placeholder="isi urutan " required>
-                </div>
+                        <div class="mb-3">
+                            <label for="nip" class="form-label">nip</label>
+                            <input type="number" class="form-control" id="nip" name="nip" placeholder="isi nip " required>
+                        </div>
 
 
-
-                <br>
-                <input type="file" name="foto" class="dropify" data-max-width="2000" data-max-width="2000" required/>
-
-                <br>
-                <center> <button class="btn btn-success" type="submit">Submit</button>
-                </center>
-            </form>
-        @else
-
-            <form action="{{ route('staff.update', ['id' => $data->id]) }}" method="post" enctype="multipart/form-data">
-                @csrf
-                <div class="mb-3">
-                    <label for="nama" class="form-label">nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama" value="{{$data->nama}}" placeholder="isi nama ">
-                </div>
-
-
-                <div class="mb-3">
-                    <label for="jabatan" class="form-label">jabatan</label>
-                    <input type="text" class="form-control" id="jabatan" name="jabatan" value="{{$data->jabatan}}" placeholder="isi jabatan ">
-                </div>
-
-
-                <div class="mb-3">
-                    <label for="nip" class="form-label">nip</label>
-                    <input type="number" class="form-control" id="nip" name="nip" value="{{$data->nip}}" placeholder="isi nip ">
-                </div>
-
-
-                <div class="mb-3">
-                    <label for="urutan" class="form-label">urutan</label>
-                    <input type="number" class="form-control" id="urutan" name="urutan" value="{{$data->urutan}}" placeholder="isi urutan ">
-                </div>
+                        <div class="mb-3">
+                            <label for="urutan" class="form-label">urutan</label>
+                            <input type="number" class="form-control" id="urutan" name="urutan" placeholder="isi urutan "
+                                required>
+                        </div>
 
 
 
-                <br>
+                        <br>
+                        <input type="file" name="foto" class="dropify" data-max-width="2000" data-max-width="2000"
+                            required />
 
-                <input type="file" name="foto" class="dropify"
-                    data-default-file="{{ url('staffThumb/' . $data->foto) }}" data-max-width="2000" data-max-width="2000" />
+                        <br>
+                        <center> <button class="btn btn-success" type="submit">Submit</button>
+                        </center>
+                    </form>
+                @else
+
+                    <form action="{{ route('staff.update', ['id' => $data->id]) }}" method="post"
+                        enctype="multipart/form-data">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama" value="{{ $data->nama }}"
+                                placeholder="isi nama ">
+                        </div>
 
 
-                <br>
-                <br>
-                <center> <button class="btn btn-success" type="submit">Submit</button>
-                </center>
-            </form>
-        @endif
+                        <div class="mb-3">
+                            <label for="jabatan" class="form-label">jabatan</label>
+                            <input type="text" class="form-control" id="jabatan" name="jabatan"
+                                value="{{ $data->jabatan }}" placeholder="isi jabatan ">
+                        </div>
 
 
+                        <div class="mb-3">
+                            <label for="nip" class="form-label">nip</label>
+                            <input type="number" class="form-control" id="nip" name="nip" value="{{ $data->nip }}"
+                                placeholder="isi nip ">
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="urutan" class="form-label">urutan</label>
+                            <input type="number" class="form-control" id="urutan" name="urutan"
+                                value="{{ $data->urutan }}" placeholder="isi urutan ">
+                        </div>
+
+
+
+                        <br>
+
+                        <input type="file" name="foto" class="dropify"
+                            data-default-file="{{ url('staffThumb/' . $data->foto) }}" data-max-width="2000"
+                            data-max-width="2000" />
+
+
+                        <br>
+                        <br>
+                        <center> <button class="btn btn-success" type="submit">Submit</button>
+                        </center>
+                    </form>
+                @endif
+
+
+            </div>
+
+        </div>
     </div>
-
-</div>
-</div>
 @endsection
 
 @section('js')

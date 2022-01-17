@@ -10,14 +10,14 @@
 
 
 @section('header')
-<div class="section-header">
-    <h1>slider</h1>
-    <div class="section-header-breadcrumb">
-      <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-      <div class="breadcrumb-item"><a href="{{ route('slider.index') }}">slider</a></div>
+    <div class="section-header">
+        <h1>slider</h1>
+        <div class="section-header-breadcrumb">
+            <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('slider.index') }}">slider</a></div>
 
+        </div>
     </div>
-  </div>
 @endsection
 
 
@@ -34,74 +34,81 @@
 
 
 
-  <br>
-<center><h1>slider</h1></center>
-  <br>
+    <br>
+    <center>
+        <h1>slider</h1>
+    </center>
+    <br>
 
     <div class="container">
         <div class="card">
 
             <div class="card-body">
-        @if ($act == 'create')
+                @if ($act == 'create')
 
-            <form action="{{ route('slider.store') }}" method="post" enctype="multipart/form-data">
-                @csrf
-                <div class="mb-3">
-                    <label for="Judul" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="Judul" name="judul" placeholder="isi Judul " required>
-                </div>
+                    <form action="{{ route('slider.store') }}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="Judul" class="form-label">Judul</label>
+                            <input type="text" class="form-control" id="Judul" name="judul" placeholder="isi Judul "
+                                required>
+                        </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" placeholder="Masukan Konten" required></textarea>
-                </div>
-
-
-
-                <input type="file" name="gambar" class="dropify" data-max-width="2000" data-max-width="2000" required/>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                            <textarea class="form-control" name="description" placeholder="Masukan Konten"
+                                required></textarea>
+                        </div>
 
 
-                <br>
-                <br>
-                <center> <button class="btn btn-success" type="submit">Submit</button>
-                </center>
-            </form>
-        @else
 
-            <form action="{{ route('slider.update', ['id' => $data->id]) }}" method="post" enctype="multipart/form-data">
-                @csrf
-                <div class="mb-3">
-                    <label for="Judul" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="Judul" name="judul" value="{{ $data->judul }}"
-                        placeholder="isi Judul ">
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                    <textarea class="form-control" name="description"
-                        placeholder="Masukan Konten">{{ $data->description }}</textarea>
-                </div>
+                        <input type="file" name="gambar" class="dropify" data-max-width="2000" data-max-width="2000"
+                            required />
 
 
-                <br>
+                        <br>
+                        <br>
+                        <center> <button class="btn btn-success" type="submit">Submit</button>
+                        </center>
+                    </form>
+                @else
+
+                    <form action="{{ route('slider.update', ['id' => $data->id]) }}" method="post"
+                        enctype="multipart/form-data">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="Judul" class="form-label">Judul</label>
+                            <input type="text" class="form-control" id="Judul" name="judul" value="{{ $data->judul }}"
+                                placeholder="isi Judul ">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                            <textarea class="form-control" name="description"
+                                placeholder="Masukan Konten">{{ $data->description }}</textarea>
+                        </div>
 
 
-                <input type="file" name="gambar" class="dropify"
-                    data-default-file="{{ url('slider/' . $data->gambar) }}" data-max-width="2000" data-max-width="2000" />
+                        <br>
 
 
-                <br>
-                <br>
-                <center> <button class="btn btn-success" type="submit">Submit</button>
-                </center>
-            </form>
-        @endif
+                        <input type="file" name="gambar" class="dropify"
+                            data-default-file="{{ url('slider/' . $data->gambar) }}" data-max-width="2000"
+                            data-max-width="2000" />
 
 
+                        <br>
+                        <br>
+                        <center> <button class="btn btn-success" type="submit">Submit</button>
+                        </center>
+                    </form>
+                @endif
+
+
+            </div>
+
+        </div>
     </div>
-
-</div>
-</div>
 @endsection
 
 @section('js')
