@@ -5,30 +5,20 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
 @endsection
 
-@section('content')
+@section('header')
+<div class="section-header">
+    <h1>slider</h1>
+    <div class="section-header-breadcrumb">
+      <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
+      <div class="breadcrumb-item"><a href="{{ route('slider.index') }}">slider</a></div>
 
-
-<div class="header bg-primary pb-1">
-    <div class="container-fluid">
-      <div class="header-body">
-        <div class="row align-items-center py-4">
-          <div class="col-lg-6 col-7">
-            <h6 class="h2 text-white d-inline-block mb-0">slider</h6>
-            <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-              <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                <li class="breadcrumb-item"><a href="{{ route('management') }}">Dashboards</a></li>
-                <li class="breadcrumb-item active" aria-current="{{ route('slider.index') }}">slider</li>
-              </ol>
-            </nav>
-          </div>
-
-        </div>
-        <!-- Card stats -->
-
-      </div>
     </div>
   </div>
+@endsection
+
+
+@section('content')
+
 
   <br>
   @if (Session::has('message'))
@@ -76,7 +66,7 @@
 
 @section('js')
 
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+{{-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> --}}
 <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
 <script>
