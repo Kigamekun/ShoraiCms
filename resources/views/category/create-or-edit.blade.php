@@ -11,10 +11,10 @@
 
 @section('header')
     <div class="section-header">
-        <h1>category</h1>
+        <h1>Category</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="{{ route('category.index') }}">category</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('category.index') }}">Category</a></div>
 
         </div>
     </div>
@@ -34,11 +34,11 @@
 
     <br>
     <center>
-        <h1>category</h1>
+        <h1>Category</h1>
     </center>
     <br>
 
-    <div class="container">
+
         <div class="card">
 
             <div class="card-body">
@@ -47,7 +47,7 @@
                     <form action="{{ route('category.store') }}" method="post">
                         @csrf
                         <div class="mb-3">
-                            <label for="nama" class="form-label">nama</label>
+                            <label for="nama" class="form-label">Nama</label>
                             <input type="text" class="form-control" id="nama" name="nama" placeholder="isi Judul "
                                 required>
                         </div>
@@ -61,7 +61,7 @@
                     <form action="{{ route('category.update', ['id' => $data->id]) }}" method="post">
                         @csrf
                         <div class="mb-3">
-                            <label for="Judul" class="form-label">nama</label>
+                            <label for="Judul" class="form-label">Nama</label>
                             <input type="text" class="form-control" id="nama" name="nama" value="{{ $data->nama }}"
                                 placeholder="isi nama ">
                         </div>
@@ -75,8 +75,7 @@
             </div>
         </div>
 
-    </div>
-
+ 
 @endsection
 
 @section('js')

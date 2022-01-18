@@ -7,10 +7,10 @@
 
 @section('header')
     <div class="section-header">
-        <h1>maps</h1>
+        <h1>Maps</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="{{ route('maps.index') }}">maps</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('maps.index') }}">Maps</a></div>
 
         </div>
     </div>
@@ -19,6 +19,12 @@
 
 @section('content')
 
+
+
+<div class="card">
+
+
+    <div class="card-body">
 
 
 
@@ -30,9 +36,9 @@
         </div>
     @endif
     <br>
-    <div class="container">
+
         <div class="d-flex justify-content-end">
-            <a href="{{ route('maps.create') }}" class="btn btn-success">Buat maps</a>
+            <a href="{{ route('maps.create') }}" class="btn btn-success">Buat Maps</a>
 
         </div>
         <br>
@@ -66,6 +72,7 @@
 
         </table>
     </div>
+</div>
 @endsection
 
 @section('js')

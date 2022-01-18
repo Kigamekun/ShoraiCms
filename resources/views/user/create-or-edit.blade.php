@@ -10,10 +10,10 @@
 
 @section('header')
     <div class="section-header">
-        <h1>Staff</h1>
+        <h1>User</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="{{ route('staff.index') }}">Staff</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('admin.users.index') }}">User</a></div>
 
         </div>
     </div>
@@ -33,7 +33,7 @@
 
     <br>
     <center>
-        <h1>Staff</h1>
+        <h1>User</h1>
     </center>
     <br>
 
@@ -43,38 +43,41 @@
             <div class="card-body">
                 @if ($act == 'create')
 
-                    <form action="{{ route('staff.store') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('admin.users.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="nama" name="nama" placeholder="isi nama " required>
+                            <input type="text" class="form-control" id="nama" name="name" placeholder="isi nama " required>
+                        </div>
+
+
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="isi email " required>
                         </div>
 
 
                         <div class="mb-3">
-                            <label for="jabatan" class="form-label">Jabatan</label>
-                            <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="isi jabatan "
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="isi password "
                                 required>
                         </div>
 
-
-                        <div class="mb-3">
-                            <label for="nip" class="form-label">NIP</label>
-                            <input type="number" class="form-control" id="nip" name="nip" placeholder="isi nip " required>
-                        </div>
-
-
-                        <div class="mb-3">
-                            <label for="urutan" class="form-label">Urutan</label>
-                            <input type="number" class="form-control" id="urutan" name="urutan" placeholder="isi urutan "
-                                required>
-                        </div>
-
-
-
+                        <label for="Permission" class="form-label">Permission</label>
                         <br>
-                        <input type="file" name="foto" class="dropify" data-max-width="2000" data-max-width="2000"
-                            required />
+                        <br>
+                        <div class="mb-3 d-flex w-100" style="height: 150px;flex-wrap:wrap;flex-direction: column">
+                            @foreach ($component as $item)
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" name="permission[]" type="checkbox" id="flexSwitchCheckDefault" value="{{$item}}">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">{{$item}}</label>
+                              </div>
+                            @endforeach
+                        </div>
+                        <br>
+                        {{-- <input type="file" name="foto" class="dropify" data-max-width="2000" data-max-width="2000"
+                            required /> --}}
 
                         <br>
                         <center> <button class="btn btn-success" type="submit">Submit</button>
@@ -82,46 +85,52 @@
                     </form>
                 @else
 
-                    <form action="{{ route('staff.update', ['id' => $data->id]) }}" method="post"
+                    <form action="{{ route('admin.users.update', ['id' => $data->id]) }}" method="post"
                         enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="nama" name="nama" value="{{ $data->nama }}"
-                                placeholder="isi nama ">
+                            <input type="text" class="form-control" id="nama" name="name" placeholder="isi nama " value="{{$data->name}}" required>
+                        </div>
+
+
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="isi email " value="{{$data->email}}"  disabled>
                         </div>
 
 
                         <div class="mb-3">
-                            <label for="jabatan" class="form-label">Jabatan</label>
-                            <input type="text" class="form-control" id="jabatan" name="jabatan"
-                                value="{{ $data->jabatan }}" placeholder="isi jabatan ">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password"  placeholder="Secured"
+                                 disabled>
                         </div>
 
-
-                        <div class="mb-3">
-                            <label for="nip" class="form-label">NIP</label>
-                            <input type="number" class="form-control" id="nip" name="nip" value="{{ $data->nip }}"
-                                placeholder="isi nip ">
-                        </div>
-
-
-                        <div class="mb-3">
-                            <label for="urutan" class="form-label">Urutan</label>
-                            <input type="number" class="form-control" id="urutan" name="urutan"
-                                value="{{ $data->urutan }}" placeholder="isi urutan ">
-                        </div>
-
-
-
+                        <label for="Permission" class="form-label">Permission</label>
                         <br>
+                        <br>
+                        <div class="mb-3 d-flex w-100" style="height: 150px;flex-wrap:wrap;flex-direction: column">
+                            @foreach ($component as $item)
+                            <div class="form-check form-switch">
+                                @if (in_array($item, (array)json_decode($data->permission)))
+                                <input class="form-check-input" name="permission[]" type="checkbox" id="flexSwitchCheckDefault" value="{{$item}}" checked>
+                                <label class="form-check-label" for="flexSwitchCheckDefault">{{$item}}</label>
 
-                        <input type="file" name="foto" class="dropify"
+                                @else
+                                <input class="form-check-input" name="permission[]" type="checkbox" id="flexSwitchCheckDefault" value="{{$item}}">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">{{$item}}</label>
+                                @endif
+                              </div>
+                            @endforeach
+                        </div>
+                        <br>
+                        {{-- <input type="file" name="foto" class="dropify"
                             data-default-file="{{ url('staffThumb/' . $data->foto) }}" data-max-width="2000"
-                            data-max-width="2000" />
+                            data-max-width="2000" /> --}}
 
 
-                        <br>
+
                         <br>
                         <center> <button class="btn btn-success" type="submit">Submit</button>
                         </center>

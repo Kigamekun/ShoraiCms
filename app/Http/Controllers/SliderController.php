@@ -127,7 +127,7 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-        Slider::find($slider->id)->delete();
+        Slider::find($id)->delete();
         return redirect()->route('slider.index')->with(['message'=>'Slider berhasil dihapus','status'=>'success']);
     }
 

@@ -39,21 +39,29 @@
                         <div class="search-backdrop"></div>
                         <div class="search-result">
                             <div class="search-header">
-                                Histories
+                                Available
                             </div>
+                            @php
+                                $searchItem = [];
+                                $NotShowable = ['User'];
+                                $modelsPath = app_path('Models');
+                                $modelFiles = Illuminate\Support\Facades\File::allFiles($modelsPath);
+                                foreach ($modelFiles as $modelFile) {
+                                    if (!in_array($modelFile->getFilenameWithoutExtension(),$NotShowable)) {
+                                        $searchItem[] = $modelFile->getFilenameWithoutExtension();
+                                    }
+                                }
+
+                            @endphp
+
+                            @foreach ($searchItem as $item)
+
                             <div class="search-item">
-                                <a href="#">How to hack NASA using CSS</a>
-                                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
+                                <a href="{{ route(strtolower($item).".index") }}">{{$item}}</a>
+                                <a href="{{ route(strtolower($item).".index") }}" class="search-close"><i class="fas fa-times"></i></a>
                             </div>
-                            <div class="search-item">
-                                <a href="#">Kodinger.com</a>
-                                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-                            </div>
-                            <div class="search-item">
-                                <a href="#">#Stisla</a>
-                                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-                            </div>
-                            <div class="search-header">
+                            @endforeach
+                            {{-- <div class="search-header">
                                 Result
                             </div>
                             <div class="search-item">
@@ -95,7 +103,7 @@
                                     </div>
                                     Create a new Homepage Design
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </form>
@@ -266,10 +274,10 @@
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="index.html">Stisla</a>
+                        <a href="index.html">{{ env('APP_NAME') }}</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="index.html">St</a>
+                        <a href="index.html">KGCS</a>
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">Dashboard</li>
@@ -277,11 +285,30 @@
                             <a href="#" class="nav-link has-dropdown"><i
                                     class="fas fa-fire"></i><span>Dashboard</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-                                <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
+                                <li><a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a></li>
+                                {{-- <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li> --}}
                             </ul>
                         </li>
-                        <li class="menu-header">Components</li>
+
+
+
+                        <li class="menu-header">Management</li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
+                                    class="fas fa-columns"></i> <span>Management User</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="{{ route('admin.users.index') }}">List User</a>
+                                </li>
+
+
+
+
+
+                            </ul>
+                        </li>
+
+
+                        <li class="menu-header">Available Component</li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
                                     class="fas fa-columns"></i> <span>Components</span></a>
@@ -301,6 +328,13 @@
 
                             </ul>
                         </li>
+
+
+
+
+
+
+
 
                     </ul>
 
@@ -348,6 +382,27 @@
     <script src="{{ url('assets/js/scripts.js') }}"></script>
     <script src="{{ url('assets/js/custom.js') }}"></script>
 
+
+    <script>
+        var source = [{
+                value: "www.foo.com",
+                label: "Spencer Kline"
+            },
+            {
+                value: "www.example.com",
+                label: "James Bond"
+            },
+
+        ];
+        $(document).ready(function() {
+            $("input#autocomplete").autocomplete({
+                source: source,
+                select: function(event, ui) {
+                    window.location.href = ui.item.value;
+                }
+            });
+        });
+    </script>
     <!-- Page Specific JS File -->
     @yield('js')
 </body>

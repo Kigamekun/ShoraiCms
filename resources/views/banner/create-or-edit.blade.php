@@ -10,10 +10,10 @@
 
 @section('header')
     <div class="section-header">
-        <h1>banner</h1>
+        <h1>Banner</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="{{ route('banner.index') }}">banner</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('banner.index') }}">Banner</a></div>
 
         </div>
     </div>
@@ -35,8 +35,7 @@
         <h1>Banner</h1>
     </center>
     <br>
-    <div class="container">
-
+   
         <div class="card">
 
             <div class="card-body">
@@ -92,7 +91,7 @@
 
             </div>
         </div>
-    </div>
+
 
 @endsection
 

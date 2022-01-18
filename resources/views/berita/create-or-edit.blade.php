@@ -42,10 +42,10 @@
 
 @section('header')
     <div class="section-header">
-        <h1>berita</h1>
+        <h1>Berita</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="{{ route('berita.index') }}">berita</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('berita.index') }}">Berita</a></div>
 
         </div>
     </div>
@@ -65,10 +65,10 @@
 
     <br>
     <center>
-        <h1>berita</h1>
+        <h1>Berita</h1>
     </center>
     <br>
-    <div class="container">
+  
         <div class="card">
 
             <div class="card-body">
@@ -155,7 +155,7 @@
 
             </div>
         </div>
-    </div>
+    
 @endsection
 
 @section('js')

@@ -7,10 +7,10 @@
 
 @section('header')
     <div class="section-header">
-        <h1>page</h1>
+        <h1>Page</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="{{ route('page.index') }}">page</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('page.index') }}">Page</a></div>
 
         </div>
     </div>
@@ -19,6 +19,12 @@
 
 @section('content')
 
+
+<div class="card">
+
+
+    <div class="card-body">
+
     <br>
     @if (Session::has('message'))
         <div class="alert alert-{{ session('status') }}">
@@ -26,18 +32,18 @@
         </div>
     @endif
     <br>
-    <div class="container">
+
         <div class="d-flex justify-content-end">
-            <a href="{{ route('page.create') }}" class="btn btn-success">Buat page</a>
+            <a href="{{ route('page.create') }}" class="btn btn-success">Buat Page</a>
 
         </div>
         <br>
         <table id="example" class="table table-striped" style="width:100%">
             <thead>
                 <tr>
-                    <th>title</th>
-                    <th>seo title</th>
-                    <th>content</th>
+                    <th>Title</th>
+                    <th>Seo Title</th>
+                    <th>Content</th>
 
                     <th>Action</th>
 
@@ -63,6 +69,7 @@
 
         </table>
     </div>
+</div>
 @endsection
 
 @section('js')

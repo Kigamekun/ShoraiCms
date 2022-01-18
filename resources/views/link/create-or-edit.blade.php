@@ -11,10 +11,10 @@
 
 @section('header')
     <div class="section-header">
-        <h1>link</h1>
+        <h1>Link</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="{{ route('link.index') }}">link</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('link.index') }}">Link</a></div>
 
         </div>
     </div>
@@ -36,12 +36,12 @@
 
     <br>
     <center>
-        <h1>link</h1>
+        <h1>Link</h1>
     </center>
     <br>
 
 
-    <div class="container">
+
         <div class="card">
 
             <div class="card-body">
@@ -50,7 +50,7 @@
                     <form action="{{ route('link.store') }}" method="post">
                         @csrf
                         <div class="mb-3">
-                            <label for="Judul" class="form-label">nama</label>
+                            <label for="Judul" class="form-label">Nama</label>
                             <input type="text" class="form-control" id="nama" name="nama" placeholder="isi nama link "
                                 required>
                         </div>
@@ -94,7 +94,7 @@
 
             </div>
         </div>
-    </div>
+
 @endsection
 
 @section('js')

@@ -5,7 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\MapsController;
 use App\Http\Controllers\BannerController;
-
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,7 +59,7 @@ Route::prefix('banner')->name('banner.')->group(function () {
     Route::post('/store', 'BannerController@store')->name('store');
     Route::get('/{id}/edit', 'BannerController@edit')->name('edit');
     Route::post('/{id}/update', 'BannerController@update')->name('update');
-    Route::get('/{id}/delete', 'BannerController@delete')->name('delete');
+    Route::get('/{id}/delete', 'BannerController@destroy')->name('delete');
 
 });
 
@@ -71,7 +71,7 @@ Route::prefix('slider')->name('slider.')->group(function () {
     Route::post('/store', 'SliderController@store')->name('store');
     Route::get('/{id}/edit', 'SliderController@edit')->name('edit');
     Route::post('/{id}/update', 'SliderController@update')->name('update');
-    Route::get('/{id}/delete', 'SliderController@delete')->name('delete');
+    Route::get('/{id}/delete', 'SliderController@destroy')->name('delete');
 });
 
 
@@ -83,7 +83,7 @@ Route::prefix('staff')->name('staff.')->group(function () {
     Route::post('/store', 'StaffController@store')->name('store');
     Route::get('/{id}/edit', 'StaffController@edit')->name('edit');
     Route::post('/{id}/update', 'StaffController@update')->name('update');
-    Route::get('/{id}/delete', 'StaffController@delete')->name('delete');
+    Route::get('/{id}/delete', 'StaffController@destroy')->name('delete');
 
 
 });
@@ -95,7 +95,7 @@ Route::prefix('link')->name('link.')->group(function () {
     Route::post('/store', 'LinkController@store')->name('store');
     Route::get('/{id}/edit', 'LinkController@edit')->name('edit');
     Route::post('/{id}/update', 'LinkController@update')->name('update');
-    Route::get('/{id}/delete', 'LinkController@delete')->name('delete');
+    Route::get('/{id}/delete', 'LinkController@destroy')->name('delete');
 
 
 });
@@ -107,7 +107,7 @@ Route::prefix('maps')->name('maps.')->group(function () {
     Route::post('/store', 'MapsController@store')->name('store');
     Route::get('/{id}/edit', 'MapsController@edit')->name('edit');
     Route::post('/{id}/update', 'MapsController@update')->name('update');
-    Route::get('/{id}/delete', 'MapsController@delete')->name('delete');
+    Route::get('/{id}/delete', 'MapsController@destroy')->name('delete');
 
 
 });
@@ -121,7 +121,7 @@ Route::prefix('agenda')->name('agenda.')->group(function () {
     Route::post('/store', 'AgendaController@store')->name('store');
     Route::get('/{id}/edit', 'AgendaController@edit')->name('edit');
     Route::post('/{id}/update', 'AgendaController@update')->name('update');
-    Route::get('/{id}/delete', 'AgendaController@delete')->name('delete');
+    Route::get('/{id}/delete', 'AgendaController@destroy')->name('delete');
 
 
 });
@@ -133,7 +133,7 @@ Route::prefix('category')->name('category.')->group(function () {
     Route::post('/store', 'CategoryController@store')->name('store');
     Route::get('/{id}/edit', 'CategoryController@edit')->name('edit');
     Route::post('/{id}/update', 'CategoryController@update')->name('update');
-    Route::get('/{id}/delete', 'CategoryController@delete')->name('delete');
+    Route::get('/{id}/delete', 'CategoryController@destroy')->name('delete');
 
 
 });
@@ -148,10 +148,27 @@ Route::prefix('page')->name('page.')->group(function () {
     Route::post('/store', 'PageController@store')->name('store');
     Route::get('/{id}/edit', 'PageController@edit')->name('edit');
     Route::post('/{id}/update', 'PageController@update')->name('update');
-    Route::get('/{id}/delete', 'PageController@delete')->name('delete');
+    Route::get('/{id}/delete', 'PageController@destroy')->name('delete');
 
 
 });
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    // crud routing
+
+    Route::prefix('users')->name('users.')->group(function () {
+
+        Route::get('/', 'UserController@index')->name('index');
+        Route::get('/create', 'UserController@create')->name('create');
+        Route::post('/store', 'UserController@store')->name('store');
+        Route::get('/{id}/edit', 'UserController@edit')->name('edit');
+        Route::post('/{id}/update', 'UserController@update')->name('update');
+        Route::get('/{id}/delete', 'UserController@destroy')->name('delete');
+
+    });
+
+});
+
 
 
 });

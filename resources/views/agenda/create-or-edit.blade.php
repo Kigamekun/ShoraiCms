@@ -34,12 +34,12 @@
 
 
 
-    <br>
-    <center>
-        <h1>agenda</h1>
-    </center>
-    <br>
-    <div class="container">
+        <br>
+        <center>
+            <h1>Agenda</h1>
+        </center>
+        <br>
+
 
         <div class="card">
 
@@ -132,7 +132,6 @@
                 @endif
             </div>
         </div>
-    </div>
 
 @endsection
 

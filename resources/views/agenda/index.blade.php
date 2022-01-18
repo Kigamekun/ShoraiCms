@@ -18,57 +18,63 @@
 
 @section('content')
 
+        <div class="card">
+
+
+            <div class="card-body">
 
 
     @if (Session::has('message'))
-        <div class="alert alert-{{ session('status') }}">
-            {{ session('message') }}
-        </div>
-    @endif
+    <div class="alert alert-{{ session('status') }}">
+        {{ session('message') }}
+    </div>
+@endif
+<br>
+
+    <div class="d-flex justify-content-end">
+        <a href="{{ route('agenda.create') }}" class="btn btn-success">Buat Agenda</a>
+
+    </div>
     <br>
-    <div class="container">
-        <div class="d-flex justify-content-end">
-            <a href="{{ route('agenda.create') }}" class="btn btn-success">Buat agenda</a>
+    <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>Judul</th>
+                <th>Tanggal</th>
+                <th>Waktu Mulai</th>
+                <th>Waktu Selesai</th>
+                <th>Deskripsi</th>
+                <th>Lokasi</th>
 
-        </div>
-        <br>
-        <table id="example" class="table table-striped" style="width:100%">
-            <thead>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($agenda as $item)
+
                 <tr>
-                    <th>Judul</th>
-                    <th>Tanggal</th>
-                    <th>Waktu Mulai</th>
-                    <th>Waktu Selesai</th>
-                    <th>Deskripsi</th>
-                    <th>Lokasi</th>
+                    <td>{{ $item->judul }}</td>
+                    <td>{{ $item->tanggal }}</td>
+                    <td>{{ $item->waktu_mulai }}</td>
+                    <td>{{ $item->waktu_selesai }}</td>
+                    <td>{{ $item->deskripsi }}</td>
+                    <td>{{ $item->lokasi }}</td>
 
-                    <th>Action</th>
+                    <td class="d-flex justify-content-end">
+                        <a class="btn btn-info" href="{{ route('agenda.edit', ['id' => $item->id]) }}">Update</a>
+                        <a class="btn btn-danger" href="{{ route('agenda.delete', ['id' => $item->id]) }}">Delete</a>
+                    </td>
 
                 </tr>
-            </thead>
-            <tbody>
-                @foreach ($agenda as $item)
+            @endforeach
 
-                    <tr>
-                        <td>{{ $item->judul }}</td>
-                        <td>{{ $item->tanggal }}</td>
-                        <td>{{ $item->waktu_mulai }}</td>
-                        <td>{{ $item->waktu_selesai }}</td>
-                        <td>{{ $item->deskripsi }}</td>
-                        <td>{{ $item->lokasi }}</td>
+        </tbody>
 
-                        <td class="d-flex justify-content-end">
-                            <a class="btn btn-info" href="{{ route('agenda.edit', ['id' => $item->id]) }}">Update</a>
-                            <a class="btn btn-danger" href="{{ route('agenda.delete', ['id' => $item->id]) }}">Delete</a>
-                        </td>
+    </table>
 
-                    </tr>
-                @endforeach
-
-            </tbody>
-
-        </table>
-    </div>
+            </div>
+        </div>
 @endsection
 
 @section('js')

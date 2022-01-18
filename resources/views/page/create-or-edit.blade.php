@@ -42,10 +42,10 @@
 
 @section('header')
     <div class="section-header">
-        <h1>page</h1>
+        <h1>Page</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="{{ route('page.index') }}">page</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('page.index') }}">Page</a></div>
 
         </div>
     </div>
@@ -58,7 +58,7 @@
 
     <br>
     <center>
-        <h1>page</h1>
+        <h1>Page</h1>
     </center>
     <br>
     <style>
@@ -69,7 +69,7 @@
     </style>
 
 
-    <div class="container">
+
         <div class="card">
 
             <div class="card-body">
@@ -78,12 +78,12 @@
                     <form action="{{ route('page.store') }}" method="post">
                         @csrf
                         <div class="mb-3">
-                            <label for="title" class="form-label">title</label>
+                            <label for="title" class="form-label">Title</label>
                             <input type="text" class="form-control" id="title" name="title" placeholder="isi title "
                                 required>
                         </div>
                         <div class="mb-3">
-                            <label for="seo_title" class="form-label">seo_title</label>
+                            <label for="seo_title" class="form-label">Seo Title</label>
                             <input type="text" class="form-control" id="seo_title" name="seo_title"
                                 placeholder="isi title " required>
                         </div>
@@ -104,12 +104,12 @@
                     <form action="{{ route('page.update', ['id' => $data->id]) }}" method="post">
                         @csrf
                         <div class="mb-3">
-                            <label for="title" class="form-label">title</label>
+                            <label for="title" class="form-label">Title</label>
                             <input type="text" class="form-control" id="title" value="{{ $data->title }}" name="title"
                                 placeholder="isi title ">
                         </div>
                         <div class="mb-3">
-                            <label for="seo_title" class="form-label">seo_title</label>
+                            <label for="seo_title" class="form-label">Seo Title</label>
                             <input type="text" class="form-control" id="seo_title" name="seo_title"
                                 value="{{ $data->seo_title }}" placeholder="isi title ">
                         </div>
@@ -129,7 +129,7 @@
 
             </div>
 
-        </div>
+     
     </div>
 @endsection
 
