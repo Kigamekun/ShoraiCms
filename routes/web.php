@@ -153,6 +153,33 @@ Route::prefix('page')->name('page.')->group(function () {
 
 });
 
+Route::prefix('video')->name('video.')->group(function () {
+    // crud routing
+    Route::get('/', 'VideoController@index')->name('index');
+    Route::get('/create', 'VideoController@create')->name('create');
+    Route::post('/store', 'VideoController@store')->name('store');
+    Route::get('/{id}/edit', 'VideoController@edit')->name('edit');
+    Route::post('/{id}/update', 'VideoController@update')->name('update');
+    Route::get('/{id}/delete', 'VideoController@destroy')->name('delete');
+
+
+});
+
+
+Route::prefix('gallery')->name('gallery.')->group(function () {
+    // crud routing
+    Route::get('/', 'GalleryController@index')->name('index');
+    Route::get('/create', 'GalleryController@create')->name('create');
+    Route::post('/store', 'GalleryController@store')->name('store');
+    Route::get('/{id}/edit', 'GalleryController@edit')->name('edit');
+    Route::post('/{id}/update', 'GalleryController@update')->name('update');
+    Route::get('/{id}/delete', 'GalleryController@destroy')->name('delete');
+
+
+});
+
+
+
 Route::prefix('admin')->name('admin.')->group(function () {
     // crud routing
 

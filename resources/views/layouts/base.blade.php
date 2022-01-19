@@ -21,6 +21,7 @@
 </head>
 
 <body>
+
     <div id="app">
         <div class="main-wrapper">
             <div class="navbar-bg"></div>
@@ -41,16 +42,20 @@
                             <div class="search-header">
                                 Available
                             </div>
+
                             @php
+
+
                                 $searchItem = [];
                                 $NotShowable = ['User'];
-                                $modelsPath = app_path('Models');
-                                $modelFiles = Illuminate\Support\Facades\File::allFiles($modelsPath);
-                                foreach ($modelFiles as $modelFile) {
-                                    if (!in_array($modelFile->getFilenameWithoutExtension(),$NotShowable)) {
-                                        $searchItem[] = $modelFile->getFilenameWithoutExtension();
+                                // $modelsPath = app_path('Models');
+                                // $modelFiles = Illuminate\Support\Facades\File::allFiles($modelsPath);
+                                foreach ((array)json_decode(Auth::user()->permission) as $modelFile) {
+                                    if (!in_array($modelFile,$NotShowable)) {
+                                        $searchItem[] = $modelFile;
                                     }
                                 }
+
 
                             @endphp
 
@@ -292,6 +297,7 @@
 
 
 
+                        @if (Auth::user()->role == 0)
                         <li class="menu-header">Management</li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
@@ -306,6 +312,7 @@
 
                             </ul>
                         </li>
+                        @endif
 
 
                         <li class="menu-header">Available Component</li>
@@ -313,6 +320,7 @@
                             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
                                     class="fas fa-columns"></i> <span>Components</span></a>
                             <ul class="dropdown-menu">
+                                @if (Auth::user()->role == 0)
                                 <li><a class="nav-link" href="{{ route('berita.index') }}">Berita</a></li>
                                 <li><a class="nav-link" href="{{ route('banner.index') }}">Banner</a></li>
                                 <li><a class="nav-link" href="{{ route('slider.index') }}">Slider</a></li>
@@ -322,6 +330,18 @@
                                 <li><a class="nav-link" href="{{ route('agenda.index') }}">Agenda</a></li>
                                 <li><a class="nav-link" href="{{ route('category.index') }}">Category</a></li>
                                 <li><a class="nav-link" href="{{ route('page.index') }}">Page</a></li>
+                                <li><a class="nav-link" href="{{ route('gallery.index') }}">Gallery</a></li>
+                                <li><a class="nav-link" href="{{ route('video.index') }}">Video</a></li>
+
+                                @else
+
+                                @foreach ($searchItem as $item)
+                                <li><a class="nav-link" href="{{ route(strtolower($item).".index") }}">{{$item}}</a></li>
+
+                                @endforeach
+
+
+                                @endif
 
 
 
