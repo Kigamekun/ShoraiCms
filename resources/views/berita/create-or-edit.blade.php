@@ -68,7 +68,7 @@
         <h1>Berita</h1>
     </center>
     <br>
-  
+
         <div class="card">
 
             <div class="card-body">
@@ -155,7 +155,7 @@
 
             </div>
         </div>
-    
+
 @endsection
 
 @section('js')
@@ -164,11 +164,6 @@
         crossorigin="anonymous"></script> --}}
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
-        });
-    </script>
 
     <!--Ionicon-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

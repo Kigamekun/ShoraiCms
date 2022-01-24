@@ -406,26 +406,7 @@
     <script src="{{ url('assets/js/custom.js') }}"></script>
 
 
-    <script>
-        var source = [{
-                value: "www.foo.com",
-                label: "Spencer Kline"
-            },
-            {
-                value: "www.example.com",
-                label: "James Bond"
-            },
 
-        ];
-        $(document).ready(function() {
-            $("input#autocomplete").autocomplete({
-                source: source,
-                select: function(event, ui) {
-                    window.location.href = ui.item.value;
-                }
-            });
-        });
-    </script>
     <!-- Page Specific JS File -->
     @yield('js')
 </body>

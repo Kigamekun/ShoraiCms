@@ -33,7 +33,12 @@ class isAllow
             return $next($request);
         }
         else {
+           if (Auth::user()->role == 0) {
+            return $next($request);
+           }
+           else {
             dd('Gak ada');
+           }
         }
     }
 }

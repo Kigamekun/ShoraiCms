@@ -102,6 +102,7 @@ class GalleryController extends Controller
     public function update(Request $request, $id)
     {
         $gallery = [];
+        $data = [];
         foreach (explode(',',$request->imgold) as $key => $value) {
             if ($value != '') {
                 $gallery[] = $value;

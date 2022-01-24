@@ -7,10 +7,10 @@
 
 @section('header')
     <div class="section-header">
-        <h1>Maps</h1>
+        <h1>Gallery</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="{{ route('management') }}">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="{{ route('gallery.index') }}">Maps</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('gallery.index') }}">Gallery</a></div>
 
         </div>
     </div>
@@ -38,7 +38,7 @@
     <br>
 
         <div class="d-flex justify-content-end">
-            <a href="{{ route('gallery.create') }}" class="btn btn-success">Buat Maps</a>
+            <a href="{{ route('gallery.create') }}" class="btn btn-success">Buat Gallery</a>
 
         </div>
         <br>

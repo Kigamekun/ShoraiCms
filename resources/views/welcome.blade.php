@@ -130,3 +130,1597 @@
         </div>
     </body>
 </html>
+
+
+{{--
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SMK NEGRI 3 Bogor">
+    <meta name="keywords" content="Smk negri 3 Bogor, Smk negri Bogor, Smk Bogor">
+    <meta name="author" content="Bonet">
+
+    <!-- Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+        html,
+        body {
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .card-img-top {
+            width: 200px;
+            border-top-left-radius: calc(.25rem - 1px);
+            border-top-right-radius: calc(.25rem - 1px);
+        }
+
+
+        body {
+            font-family: 'Cabin', sans-serif;
+            width: 100%;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            background-color: #f1f1ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbars {
+            background-color: #c40464;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+
+        .slick-prev,
+        .slick-next {
+            background: #000;
+            border-radius: 15px;
+            border-color: transparent;
+        }
+
+        .slick-slide {
+            margin: 10px;
+        }
+
+
+
+        .logo i {
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        .title {
+            display: flex;
+            font-size: 15px;
+            padding: 15px;
+            align-items: center;
+        }
+
+        .title h3 {
+            font-size: 34px;
+        }
+
+        .srcs[type=search] {
+            border-radius: 20px;
+        }
+
+        .swiperp {
+            width: 85%;
+            height: 70%;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            font-size: 18px;
+            background: #f8f8ff;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swpr {
+            background: #f8f8ff;
+        }
+
+        .swpr a {
+            color: #000;
+        }
+
+        .swpr a:hover {
+            color: #6d6d6d;
+        }
+
+        .text {
+            width: 100%;
+            padding: 8px 0;
+            background: rgb(0, 0, 0, 0.5);
+            position: absolute;
+            bottom: 0px;
+            text-align: justify;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .crds a:hover {
+            color: #000;
+        }
+
+        .info {
+            width: 100%;
+            padding: 8px 0;
+            position: absolute;
+            top: 280px;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .info h2 {
+            font-size: 40px;
+        }
+
+        .info a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .media img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .sa {
+            margin-left: 380px;
+            margin-bottom: 20px;
+        }
+
+        .carousel .carousel-item img {
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .carousel .carousel-item img {
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .dropdown-item:hover {
+            background-color: #0d0e0f;
+            color: white;
+        }
+
+        .dropdown-menu {
+            background-color: #0f1a2b;
+            color: white;
+        }
+
+        .text-ko {
+            border-radius: 20px;
+            justify-content: center;
+            margin-top: 8px;
+
+        }
+
+        .ittm a {
+            color: #000000;
+        }
+
+        .ittm a:hover {
+            color: #2867db;
+        }
+
+        .qqw a {
+            color: #000000;
+        }
+
+        .qqw a:hover {
+            color: #2867db;
+        }
+
+
+
+
+        .crds a:hover {
+            color: #000;
+        }
+
+
+        .carousel-control-next {
+            top: -3%;
+            height: 40px;
+            width: 40px;
+            right: 10%;
+            border-radius: 25px;
+        }
+
+        .carousel-control-prev {
+            left: 80%;
+            top: -3%;
+            height: 40px;
+            width: 40px;
+            border-radius: 25px;
+        }
+
+
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .kartu img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .karus img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .center {
+            width: 75%;
+        }
+
+        .crds {
+            padding: 80px;
+            top: 320px;
+            position: absolute;
+            background: rgb(0, 0, 0, 0.4);
+            width: 600px;
+            border-radius: 10px;
+        }
+
+        .xlf p a {
+            color: #000;
+        }
+
+        .xlf p a:hover {
+            color: #be3333;
+            transition: 0.2s;
+        }
+
+        a:hover {
+            color: #c5c5c5;
+            transition: 0.2s;
+        }
+
+        .imb a {
+            color: #000;
+        }
+
+        .imb a:hover {
+            color: rgb(131, 131, 131);
+        }
+
+        .cri a {
+            color: #000;
+        }
+
+        .cri a:hover {
+            color: #d3cfcf;
+            transition: 0.2s;
+        }
+
+        .crdf a:hover {
+            color: #be3333;
+            transition: 0.2s;
+        }
+
+        .crdf a {
+            color: rgb(15, 15, 15);
+        }
+
+        .ckrt a:hover {
+            color: #be3333;
+            transition: 0.2s;
+        }
+
+        .ckrt a {
+            color: rgb(15, 15, 15);
+        }
+
+        .frts {
+            top: 300px;
+            position: absolute;
+            background: rgb(0, 0, 0, 0.5);
+        }
+
+        .frtss {
+            top: 230px;
+            position: absolute;
+            background: rgb(0, 0, 0, 0.5);
+        }
+
+        a {
+            position: relative;
+            color: white;
+        }
+
+
+
+
+        @media (max-width: 1199px) {
+            .rts {
+                display: none;
+            }
+
+            .frameYt {
+                margin-left: 100px;
+            }
+
+            .crds {
+                top: 210px;
+                width: 450px;
+                padding: 10px;
+
+            }
+
+
+
+        }
+
+        @media (max-width: 768px) {
+
+            .karus img {
+                object-fit: cover;
+                width: 100%;
+                height: 400px;
+            }
+
+            .center {
+                width: 100%;
+            }
+
+            .crds {
+                width: 270px;
+                top: 230px;
+                padding: 10px;
+                background-color: rgb(0, 0, 0, 0.3);
+            }
+
+
+            .slick-prev,
+            .slick-next {
+                background: #000;
+                border-radius: 15px;
+                margin: 15px;
+                border-color: transparent;
+            }
+
+
+            .rts {
+                display: none;
+            }
+
+            .qq {
+                display: none;
+            }
+
+            html,
+            body {
+                position: relative;
+
+            }
+
+
+            .sa {
+                margin-left: 1px;
+            }
+
+            .logo {
+                display: none;
+            }
+
+            .date {
+                display: none;
+            }
+
+            .top {
+                height: 80px;
+            }
+
+            .bbn {
+                margin-top: 10px;
+            }
+
+            .frameYt {
+                margin-left: 0px;
+            }
+
+        }
+
+    </style>
+
+    <link rel="shortcut icon" href="img/logo-removebg-preview.png" type="image/x-icon">
+
+    <title>SMK NEGRI 3 BOGOR</title>
+
+</head>
+
+<body>
+
+
+    <!-- header -->
+    <header>
+
+        <div class="top d-flex text-light" style="background-color: #042484; height: 70px;">
+            <div class="top-title d-flex container mt-2">
+                <p class="bbn btn text-light fw-bold fs-7"
+                    style="background-color: #c40464; height: 40px; width: 100px;  border-radius: 50px; margin-right: 10px;">
+                    Berita!</p>
+                <div id="carouselExampleSlidesOnly" class="carousel slide mt-2" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, molestiae?</p>
+                        </div>
+                        <div class="carousel-item">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date" style="margin-right: 15px; margin-top: 12px;">
+                <p><span id="datE"></span></p>
+            </div>
+        </div>
+
+        <div class="title container">
+            <img src="img/logo-removebg-preview.png" alt="" class="" style="width: 70px; height: 70px;">
+            <div class="mt-2">
+                <h3 class="fw-bold">SMKN 3 BOGOR</h3>
+            </div>
+
+            <div class="logo ms-auto p-2">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-google"></i>
+                <i class="bi bi-youtube"></i>
+            </div>
+        </div>
+
+        <nav class="navbars navbar navbar-expand-lg navbar-dark" style="margin: auto;">
+            <div class="container-fluid fw-bold">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Profil
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-light" href="#">Sejarah</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Visi Misi</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Sarana Prasarana</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Prestasi</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Ekstrakulikuler</a></li>
+                                <li><a class="dropdown-item text-light" href="#">OSIS</a></li>
+                                <div class="btn-group dropend">
+                                    <button type="button" class="btn dropdown-toggle text-light"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Warga Sekolah
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item text-light" href="#">Data Guru</a>
+                                        <a class="dropdown-item text-light" href="#">Data Siswa</a>
+                                        <a class="dropdown-item text-light" href="#">Data Staff</a>
+                                        <a class="dropdown-item text-light" href="#">Data Alumni</a>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Struktur Organisasi</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Informasi
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item  text-light" href="#">Berita</a></li>
+                                <li><a class="dropdown-item  text-light" href="#">Agenda Sekolah</a></li>
+                                <li><a class="dropdown-item  text-light" href="#">Pengumuman</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Galeri</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Buku Tamu</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                PSB
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item  text-light" href="#">Pendaftaran</a></li>
+                                <li><a class="dropdown-item  text-light" href="#">Pengumuman</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">E-learning</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Al-quran</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Daftar isi</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="srcs form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn text-light" style="
+                background-color: #c40464;" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+
+    <!-- main -->
+    <main>
+        <!-- Slick -->
+        <center>
+            <div class="center">
+                @foreach (DB::table('slider')->get() as $item)
+
+                    <div>
+                        <div class="karus card text-white border-0 align-items-center">
+                            <img src="{{ url('slider/' . $item->gambar) }}" class="card-img" alt="...">
+                            <div class="crds card-img-overlay text-start">
+                                <a href="https://eviorthemes.com/ennlil/" class="fs-2  card-title fw-bold"
+                                    target="_blank">{{ $item->judul }}</a>
+                                <p class="card-text mt-2">{{ $item->created_at }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                @endforeach
+
+
+            </div>
+        </center>
+
+        <!-- Featured -->
+        <div class="container">
+
+            <h2 class="fw-bold mt-5">Featured news</h2>
+
+            <div class="row mb-2 ">
+                <div class="sa col-12 mt-4">
+                    <ul class="tabs nav rounded-pill mb-2 justify-content-center fs-5" id="" style=" width: 350px; background-color: #ffffff; ">
+                        @foreach (DB::table('categories')->get() as $key => $item)
+                        @if ($key == 0)
+                        <li class="nav-item qqw text-center">
+                            <a href="#tab{{$item->id}}" class="nav-link active fw-bold" data-bs-toggle="tab">{{$item->nama}}</a>
+                        </li>
+                        @else
+                        <li class="nav-item qqw">
+                            <a href="#tab{{$item->id}}" class="nav-link fw-bold" data-bs-toggle="tab">{{$item->nama}}</a>
+                        </li>
+                        @endif
+                    @endforeach
+
+
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 col-md-12 col-12 ">
+                    <div class="tab-content">
+                        @foreach (DB::table('categories')->get() as $ds => $ct)
+                            @if ($ds == 0)
+
+
+                                <div class="tab-pane fade show active" id="tab{{ $ct->id }}">
+                                    <div class="row">
+                                        @foreach (DB::table('berita')->where('categories', $ct->id)->get()
+    as $key => $item)
+                                            @if ($key == 0)
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="tbf card bg-dark border-0 text-white ">
+                                                        <img src="{{ url('thumbBerita/' . $item->gambar) }}"
+                                                            class="w-100 class-img"
+                                                            style=" height: 450px; object-fit: cover; border-radius: 10px;"
+                                                            alt="">
+                                                        <div class="frts card-img-overlay ">
+                                                            <a href="https://eviorthemes.com/ennlil/"
+                                                                class="fs-4  card-title fw-bold"
+                                                                target="_blank">{{ $item->judul }}</a>
+                                                            <p class="card-text mt-2">{{ $item->created_at }}</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            @endif
+                                        @endforeach
+
+
+                                        <div class="col-md-6">
+                                            <div class="row">
+
+
+
+                                                @foreach (DB::table('berita')->where('categories', $ct->id)->get()
+    as $item)
+                                                    <div class="col-md-12 ">
+                                                        <div class="col-sm-12 col-lg-12 mb-3">
+                                                            <div class="card d-flex border-0 p-2"
+                                                                style="height: 140px; width: 370px;">
+                                                                <div class="media d-flex mt-2 ms-2">
+                                                                    <div
+                                                                        class="align-items-center mt-1 justify-content-center rounded me-3">
+                                                                        <img src="{{ url('thumbBerita/' . $item->gambar) }}"
+                                                                            alt="">
+                                                                    </div>
+                                                                    <div class="crdf media-body mt-3">
+                                                                        <a href="https://eviorthemes.com/ennlil/"
+                                                                            class="fs-6  card-title fw-bold"
+                                                                            target="_blank">{{ $item->judul }}</a>
+                                                                        <p class="mt-1"><small
+                                                                                class=""> <i
+                                                                                    class="bi bi-clock"></i>
+                                                                                {{ $item->created_at }}</small></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                @endforeach
+
+
+
+
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                            @else
+
+                                <div class="tab-pane fade show" id="tab{{ $ct->id }}">
+                                    <div class="row">
+                                        @foreach (DB::table('berita')->where('categories', $ct->id)->get()
+    as $key => $item)
+                                            @if ($key == 0)
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="tbf card bg-dark border-0 text-white ">
+                                                        <img src="{{ url('thumbBerita/' . $item->gambar) }}"
+                                                            class="w-100 class-img"
+                                                            style=" height: 450px; object-fit: cover; border-radius: 10px;"
+                                                            alt="">
+                                                        <div class="frts card-img-overlay ">
+                                                            <a href="https://eviorthemes.com/ennlil/"
+                                                                class="fs-4  card-title fw-bold"
+                                                                target="_blank">{{ $item->judul }}</a>
+                                                            <p class="card-text mt-2">{{ $item->created_at }}</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            @endif
+                                        @endforeach
+
+
+                                        <div class="col-md-6">
+                                            <div class="row">
+
+
+
+                                                @foreach (DB::table('berita')->where('categories', $ct->id)->get()
+    as $item)
+                                                    <div class="col-md-12 ">
+                                                        <div class="col-sm-12 col-lg-12 mb-3">
+                                                            <div class="card d-flex border-0 p-2"
+                                                                style="height: 140px; width: 370px;">
+                                                                <div class="media d-flex mt-2 ms-2">
+                                                                    <div
+                                                                        class="align-items-center mt-1 justify-content-center rounded me-3">
+                                                                        <img src="{{ url('thumbBerita/' . $item->gambar) }}"
+                                                                            alt="">
+                                                                    </div>
+                                                                    <div class="crdf media-body mt-3">
+                                                                        <a href="https://eviorthemes.com/ennlil/"
+                                                                            class="fs-6  card-title fw-bold"
+                                                                            target="_blank">{{ $item->judul }}</a>
+                                                                        <p class="mt-1"><small
+                                                                                class=""> <i
+                                                                                    class="bi bi-clock"></i>
+                                                                                {{ $item->created_at }}</small></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                @endforeach
+
+
+
+
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            @endif
+                        @endforeach
+
+
+
+
+
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-4">
+                    <div class="row p-3  mx-auto">
+                        <div class=" col-sm-6 mb-2 text-center">
+                            <button type="button" class=" btz btn btn-dark position-relative"
+                                style="background-color: #55acee; width: 150px;"
+                                href="https://www.youtube.com/watch?v=P-7AZYSlHw8&t=1465s">
+                                <a href="https://eviorthemes.com/ennlil/"
+                                    class="text-decoration-none fw-bold text-light">Twitter</a> <i
+                                    class="bi bi-twitter"></i>
+                            </button>
+                        </div>
+                        <div class=" col-sm-6 mb-2 text-center">
+                            <button type="button" class=" btz btn btn-dark position-relative"
+                                style="background-color: #3B5999; width: 150px;"
+                                href="https://www.youtube.com/watch?v=P-7AZYSlHw8&t=1465s">
+                                <a href="https://eviorthemes.com/ennlil/"
+                                    class="text-decoration-none fw-bold text-light">Facebook</a> <i
+                                    class="bi bi-facebook"></i>
+                            </button>
+                        </div>
+                        <div class=" col-sm-6 mb-2 text-center">
+                            <button type="button" class="btn btn-dark position-relative"
+                                style="background-color: #C32AA4; width: 150px;"
+                                href="https://www.youtube.com/watch?v=P-7AZYSlHw8&t=1465s">
+                                <a href="https://eviorthemes.com/ennlil/"
+                                    class="text-decoration-none fw-bold text-light">Instagram</a> <i
+                                    class="bi bi-instagram"></i>
+                            </button>
+                        </div>
+                        <div class=" col-sm-6 mb-2 text-center">
+                            <button type="button" class="btn btn-dark position-relative"
+                                style="background-color: #E42C27; width: 150px;"
+                                href="https://www.youtube.com/watch?v=P-7AZYSlHw8&t=1465s">
+                                <a href="https://eviorthemes.com/ennlil/"
+                                    class="text-decoration-none fw-bold text-light">Youtube</a> <i
+                                    class="bi bi-youtube"></i>
+                            </button>
+                        </div>
+
+                        <div class="row bg-light justify-content-center align-items-center mt-4 m-1 p-3">
+                            <h4 class="fw-bold mb-2">Most loved</h4>
+                            <div class="col-12">
+                                <div class="swiper mySwipers">
+                                    <div class="swiper-wrapper">
+                                       @foreach (DB::table('berita')->get() as $item)
+                                       <div class="swiper-slide swpr mb-5">
+                                        <img src="{{ url('thumbBerita/' . $item->gambar) }}" alt="" class="img-fluid mx-auto"
+                                            style="object-fit: cover; width: 100%; height: 150px;">
+                                        <a href="" class="text-start fw-bold fs-5">{{$item->judul}}</a>
+                                    </div>
+
+                                       @endforeach
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- kateg -->
+        {{-- <div class="qq container-fluid mt-4 mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="card bg-dark text-white ">
+                            <img src="img/a1.png" class="card-img  w-100 h-50" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title text-center fw-bold mt-4"
+                                    style="background: rgb(0, 0, 0, 0.7); border-radius: 10px;">Card title</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card bg-dark text-white ">
+                            <img src="img/a1.png" class="card-img  w-100 h-50" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title text-center fw-bold mt-4"
+                                    style="background: rgb(0, 0, 0, 0.7); border-radius: 10px;">Card title</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card bg-dark text-white ">
+                            <img src="img/a1.png" class="card-img  w-100 h-50" alt="...">
+                            <div class="card-img-overlay d">
+                                <h5 class="card-title text-center fw-bold mt-4"
+                                    style="background: rgb(0, 0, 0, 0.7); border-radius: 10px;">Card title</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card bg-dark text-white ">
+                            <img src="img/a1.png" class="card-img  w-100 h-50" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title text-center fw-bold mt-4"
+                                    style="background: rgb(0, 0, 0, 0.7); border-radius: 10px;">Card title</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card bg-dark text-white ">
+                            <img src="img/a1.png" class="card-img  w-100 h-50" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title text-center fw-bold mt-4"
+                                    style="background: rgb(0, 0, 0, 0.7); border-radius: 10px;">Card title</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card bg-dark text-white ">
+                            <img src="img/a1.png" class="card-img  w-100 h-50" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title text-center fw-bold mt-4"
+                                    style="background: rgb(0, 0, 0, 0.7); border-radius: 10px;">Card title</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+
+        <!-- info -->
+        <div class="container mt-5">
+            <div class="row ">
+                <div class="col-lg-8 col-md-12 dark">
+                    <h2 class="fw-bold mb-4 mt-5">Editor's Picks</h2>
+                    <div class="card mb-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/a1.png" class="img-fluid rounded-start w-100 h-100"
+                                    style=" object-fit: cover; width: 350px; height: 320px;" alt="...">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card cri card-body mt-2 border-0">
+                                    <a href="" class="fs-4 fw-bold card-title">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing. </a>
+                                    <p class="card-text"><small class="text-muted"><i
+                                                class="bi bi-clock"></i> Last updated 3 mins ago</small></p>
+                                    <p class="card-text">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <button href="" class="btn btn-danger">Read more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-lg-8 ">
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-4 ">
+                            <div class="card bg-dark border-0 text-white ">
+                                <img src="img/a1.png" class="w-100 class-img"
+                                    style=" height: 380px; object-fit: cover; border-radius: 10px;" alt="">
+                                <div class="frtss card-img-overlay ">
+                                    <a href="https://eviorthemes.com/ennlil/" class="fs-4  card-title fw-bold"
+                                        target="_blank">Lorem ipsum dolor sit, amet consectetur adipisicing elit..</a>
+                                    <p class="card-text mt-2">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-4 ">
+                            <div class="card bg-dark border-0 text-white ">
+                                <img src="img/a1.png" class="w-100 class-img"
+                                    style=" height: 380px; object-fit: cover; border-radius: 10px;" alt="">
+                                <div class="frtss card-img-overlay ">
+                                    <a href="https://eviorthemes.com/ennlil/" class="fs-4  card-title fw-bold"
+                                        target="_blank">Lorem ipsum dolor sit, amet consectetur adipisicing elit..</a>
+                                    <p class="card-text mt-2">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-4 ">
+                            <div class="card bg-dark border-0 text-white ">
+                                <img src="img/a1.png" class="w-100 class-img"
+                                    style=" height: 380px; object-fit: cover; border-radius: 10px;" alt="">
+                                <div class="frtss card-img-overlay ">
+                                    <a href="https://eviorthemes.com/ennlil/" class="fs-4  card-title fw-bold"
+                                        target="_blank">Lorem ipsum dolor sit, amet consectetur adipisicing elit..</a>
+                                    <p class="card-text mt-2">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-4 ">
+                            <div class="card bg-dark border-0 text-white ">
+                                <img src="img/a1.png" class="w-100 class-img"
+                                    style=" height: 380px; object-fit: cover; border-radius: 10px;" alt="">
+                                <div class="frtss card-img-overlay ">
+                                    <a href="https://eviorthemes.com/ennlil/" class="fs-4  card-title fw-bold"
+                                        target="_blank">Lorem ipsum dolor sit, amet consectetur adipisicing elit..</a>
+                                    <p class="card-text mt-2">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 col-md-12 bg-light" style="border-radius: 20px;">
+                    <div class="row">
+                        <div class="col-6 ms-4">
+                            <ul class="tabs nav rounded-pill mb-2 mx-auto justify-content-center " id=""
+                                style=" width: 300px; background-color: #ffffff; ">
+                                <li class="nav-item ittm text-center">
+                                    <a href="#popus" class="nav-link active fw-bold fs-6 "
+                                        data-bs-toggle="tab">Home</a>
+                                </li>
+                                <li class="nav-item ittm">
+                                    <a href="#recent" class="nav-link fw-bold fs-6 " data-bs-toggle="tab">Profile</a>
+                                </li>
+                                <li class="nav-item ittm">
+                                    <a href="#comment" class="nav-link fw-bold fs-6 " data-bs-toggle="tab">Messages</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="tab-content ">
+                            <div class="tab-pane fade show active" id="popus">
+                                <div class="col-md-12 mb-3">
+                                    <div class="card card-body d-flex border-0">
+                                        <div class="media d-flex">
+                                            <div class="align-items-center justify-content-center rounded me-3">
+                                                <img src="img/a1.png" alt="">
+                                            </div>
+                                            <div class="imb media-body mt-2">
+                                                <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit amet
+                                                    consectetur, adipisicing elit.</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="card card-body d-flex border-0">
+                                        <div class="media d-flex">
+                                            <div class="align-items-center justify-content-center rounded me-3">
+                                                <img src="img/a1.png" alt="">
+                                            </div>
+                                            <div class="imb media-body mt-2">
+                                                <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit amet
+                                                    consectetur, adipisicing elit.</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="card card-body d-flex border-0">
+                                        <div class="media d-flex">
+                                            <div class="align-items-center justify-content-center rounded me-3">
+                                                <img src="img/a1.png" alt="">
+                                            </div>
+                                            <div class="imb media-body mt-2">
+                                                <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit amet
+                                                    consectetur, adipisicing elit.</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="card card-body d-flex border-0">
+                                        <div class="media d-flex">
+                                            <div class="align-items-center justify-content-center rounded me-3">
+                                                <img src="img/a1.png" alt="">
+                                            </div>
+                                            <div class="imb media-body mt-2">
+                                                <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit amet
+                                                    consectetur, adipisicing elit.</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="card card-body d-flex border-0">
+                                        <div class="media d-flex">
+                                            <div class="align-items-center justify-content-center rounded me-3">
+                                                <img src="img/a1.png" alt="">
+                                            </div>
+                                            <div class="imb media-body mt-2">
+                                                <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit amet
+                                                    consectetur, adipisicing elit.</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="recent">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12 mb-3">
+                                                <div class="card card-body d-flex border-0">
+                                                    <div class="media d-flex">
+                                                        <div
+                                                            class="align-items-center justify-content-center rounded me-3">
+                                                            <img src="img/a1.png" alt="">
+                                                        </div>
+                                                        <div class="imb media-body mt-2">
+                                                            <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit
+                                                                amet consectetur, adipisicing elit.</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="card card-body d-flex border-0">
+                                                    <div class="media d-flex">
+                                                        <div
+                                                            class="align-items-center justify-content-center rounded me-3">
+                                                            <img src="img/a1.png" alt="">
+                                                        </div>
+                                                        <div class="imb media-body mt-2">
+                                                            <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit
+                                                                amet consectetur, adipisicing elit.</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="card card-body d-flex border-0">
+                                                    <div class="media d-flex">
+                                                        <div
+                                                            class="align-items-center justify-content-center rounded me-3">
+                                                            <img src="img/a1.png" alt="">
+                                                        </div>
+                                                        <div class="imb media-body mt-2">
+                                                            <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit
+                                                                amet consectetur, adipisicing elit.</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="card card-body d-flex border-0">
+                                                    <div class="media d-flex">
+                                                        <div
+                                                            class="align-items-center justify-content-center rounded me-3">
+                                                            <img src="img/a1.png" alt="">
+                                                        </div>
+                                                        <div class="imb media-body mt-2">
+                                                            <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit
+                                                                amet consectetur, adipisicing elit.</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="card card-body d-flex border-0">
+                                                    <div class="media d-flex">
+                                                        <div
+                                                            class="align-items-center justify-content-center rounded me-3">
+                                                            <img src="img/a1.png" alt="">
+                                                        </div>
+                                                        <div class="imb media-body mt-2">
+                                                            <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit
+                                                                amet consectetur, adipisicing elit.</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="comment">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12 mb-3">
+                                                <div class="card card-body d-flex border-0">
+                                                    <div class="media d-flex">
+                                                        <div
+                                                            class="align-items-center justify-content-center rounded me-3">
+                                                            <img src="img/a1.png" alt="">
+                                                        </div>
+                                                        <div class="imb media-body mt-2">
+                                                            <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit
+                                                                amet consectetur, adipisicing elit.</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="card card-body d-flex border-0">
+                                                    <div class="media d-flex">
+                                                        <div
+                                                            class="align-items-center justify-content-center rounded me-3">
+                                                            <img src="img/a1.png" alt="">
+                                                        </div>
+                                                        <div class="imb media-body mt-2">
+                                                            <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit
+                                                                amet consectetur, adipisicing elit.</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="card card-body d-flex border-0">
+                                                    <div class="media d-flex">
+                                                        <div
+                                                            class="align-items-center justify-content-center rounded me-3">
+                                                            <img src="img/a1.png" alt="">
+                                                        </div>
+                                                        <div class="imb media-body mt-2">
+                                                            <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit
+                                                                amet consectetur, adipisicing elit.</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="card card-body d-flex border-0">
+                                                    <div class="media d-flex">
+                                                        <div
+                                                            class="align-items-center justify-content-center rounded me-3">
+                                                            <img src="img/a1.png" alt="">
+                                                        </div>
+                                                        <div class="imb media-body mt-2">
+                                                            <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit
+                                                                amet consectetur, adipisicing elit.</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="card card-body d-flex border-0">
+                                                    <div class="media d-flex">
+                                                        <div
+                                                            class="align-items-center justify-content-center rounded me-3">
+                                                            <img src="img/a1.png" alt="">
+                                                        </div>
+                                                        <div class="imb media-body mt-2">
+                                                            <a href="" class="fs-6 fw-bold">Lorem ipsum dolor sit
+                                                                amet consectetur, adipisicing elit.</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video -->
+        <h2 class="fw-bold container mt-5 ">Featured Videos</h2>
+        <div class="container mt-3 justify-content-center align-items-center" style="background-color: #182B49;">
+
+            <div class="row ">
+                <div class="col-lg-6 col-md-12">
+
+                    <div class="ratio ratio-1x1" style="">
+                        <iframe src="{{ DB::table('video')->orderBy('created_at', 'DESC')->first()->video }}"
+                            title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-6 rts" style="margin-top: 50px;">
+                    <div class="row">
+                        <div class="col-md-12 mb-4">
+                            <div class="card card-body d-flex" style="background-color: #182B49;">
+                                <div class="media d-flex ">
+                                    <div class="align-items-center justify-content-center rounded me-3">
+                                        <img src="img/a1.png" alt="">
+                                    </div>
+                                    <div class="media-body mt-3 text-light">
+                                        <h5 class="fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Numquam, cumque!</h5>
+                                        <small> <i class="bi bi-clock"></i> Lorem ipsum </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <div class="card card-body d-flex" style="background-color: #182B49;">
+                                <div class="media d-flex ">
+                                    <div class="align-items-center justify-content-center rounded me-3">
+                                        <img src="img/a1.png" alt="">
+                                    </div>
+                                    <div class="media-body mt-3 text-light">
+                                        <h5 class="fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Numquam, cumque!</h5>
+                                        <small> <i class="bi bi-clock"></i> Lorem ipsum </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card card-body d-flex" style="background-color: #182B49;">
+                                <div class="media d-flex ">
+                                    <div class="align-items-center justify-content-center rounded me-3">
+                                        <img src="img/a1.png" alt="">
+                                    </div>
+                                    <div class="media-body mt-3 text-light">
+                                        <h5 class="fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Numquam, cumque!</h5>
+                                        <small> <i class="bi bi-clock"></i> Lorem ipsum </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <h2 class="fw-bold container mt-5">Don’t Miss</h2>
+        <center>
+
+            <div class="container mt-3">
+                <div class="sel">
+                    <div>
+                        <div class="card kartu" style="width: 15rem;">
+                            <img src="img/a1.png" class="card-img-top" alt="..." style="">
+                            <div class="ckrt card-body text-start ">
+                                <a href="" class="card-title fw-bold fs-5">Card title</a>
+                                <p class="card-text mt-2">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                                <div class="">
+                                    <hr>
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card kartu" style="width: 15rem;">
+                            <img src="img/a1.png" class="card-img-top" alt="..." style="">
+                            <div class="ckrt card-body text-start">
+                                <a href="" class="card-title fw-bold fs-5">Card title</a>
+                                <p class="card-text mt-2">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                                <div class="">
+                                    <hr>
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card kartu" style="width: 15rem;">
+                            <img src="img/a1.png" class="card-img-top" alt="..." style="">
+                            <div class="ckrt card-body text-start">
+                                <a href="" class="card-title fw-bold fs-5">Card title</a>
+                                <p class="card-text mt-2">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                                <div class="">
+                                    <hr>
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card kartu" style="width: 15rem;">
+                            <img src="img/a1.png" class="card-img-top" alt="..." style="">
+                            <div class="ckrt card-body text-start">
+                                <a href="" class="card-title fw-bold fs-5">Card title</a>
+                                <p class="card-text mt-2">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                                <div class="">
+                                    <hr>
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card kartu" style="width: 15rem;">
+                            <img src="img/a1.png" class="card-img-top" alt="..." style="">
+                            <div class="ckrt card-body text-start">
+                                <a href="" class="card-title fw-bold fs-5">Card title</a>
+                                <p class="card-text mt-2">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                                <div class="">
+                                    <hr>
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </main>
+
+
+    <!-- footer -->
+    <footer class="text-center text-lg-start bg-light mt-5">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="bi bi-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="bi bi-youtube"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+        </section>
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <img src="img/logo-removebg-preview.png" alt="" width="40px"> SMK NEGRI 3 BOGOR
+                        </h6>
+                        <p>
+                            Menghasilkan tamatan yang mampu bekerja, mandiri, bertanggung jawab dan terus meningkatkan
+                            keimanan, ketaqwaan, ilmu pengetahuan, keterampilan dengan prinsip belajar sepanjang hayat
+                            serta mampu bersikap responsif dan adaptif terhadap perkembangan di era global
+                        </p>
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mt-2 mx-auto mt-2 mb-4">
+                        <div class="xlf">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Useful links
+                            </h6>
+                            <p>
+                                <a href="#!" class="">HOME</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="">E-LEARNING</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="">PSB-ONLINE</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="">BUKU TAMU</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-2 mb-4">
+                        <div class="xlf">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                More info
+                            </h6>
+                            <p>
+                                <a href="#!" class="">Berita Terkini</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="">Pendaftaran</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="">Pengumuman</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="">Informasi</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-2 mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <p><i class="bi bi-house"></i> Jl. Raya Pajajaran No. 84 Bogor - 15161 </p>
+                        <p>
+                            <i class="bi bi-envelope"></i>
+                            smkn3bogor@gmail.com
+                        </p>
+                        <p><i class="bi bi-phone"></i> 0251-8327120</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="">website.com</a>
+        </div>
+    </footer>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Slick JS -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Our Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+    <script>
+        const nav = document.querySelector(".navbar");
+        let lastScrollY = window.scrollX;
+        const dt = new Date();
+
+        window.addEventListener("scroll", () => {
+            if (lastScrollY < window.scrollY) {
+                nav.classList.add("fixed-top");
+            } else {
+                nav.classList.remove("fixed-top");
+            }
+
+            // lastScrollY = window.scrollY;
+
+        });
+
+
+        document.getElementById("datE").innerHTML = dt.toDateString();
+
+
+
+
+        // slidecard
+        $(document).ready(function() {
+            $('.sel').slick({
+                accessibility: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+
+                    }
+
+                }, {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        dots: true,
+                        infinite: true,
+
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        infinite: true,
+                        autoplay: true,
+                    }
+                }]
+            });
+        });
+
+
+        // mostlove
+        var swiper = new Swiper(".mySwipers", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+
+
+        // imageAwal
+        $('.center').slick({
+            centerMode: true,
+            arrows: false,
+            slidesToShow: 1,
+            responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+
+        var btnContain = document.getElementById("tabs")
+        var btn = btnContain.getElementsByClassName("nav-link")
+
+        for (var i = 0; i < btn.length; i++) {
+            btn[i].addEventListener('click', function() {
+                var current = document.getElementsByClassName("active")
+                current[0].className = current[0].className.replace(" active")
+                this.className += " active"
+            })
+        }
+    </script>
+</body>
+
+</html> --}}
