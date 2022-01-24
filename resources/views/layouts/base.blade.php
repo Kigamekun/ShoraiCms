@@ -66,6 +66,9 @@
                                 <a href="{{ route(strtolower($item).".index") }}" class="search-close"><i class="fas fa-times"></i></a>
                             </div>
                             @endforeach
+
+
+
                             {{-- <div class="search-header">
                                 Result
                             </div>

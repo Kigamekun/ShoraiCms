@@ -41,6 +41,9 @@ Route::prefix('management')->group(function () {
 
     Route::get('/', 'DashboardController@index')->name('management');
 
+
+    Route::middleware(['isAllow'])->group(function () {
+
 Route::prefix('berita')->name('berita.')->group(function () {
     // crud routing
     Route::get('/', 'BeritaController@index')->name('index');
@@ -196,6 +199,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 });
 
+
+    });
 
 
 });
